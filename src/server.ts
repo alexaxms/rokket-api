@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan("[:status] :method\t:url"));
 
-app.use("/api/books", books);
+app.use("/books", books);
 
 startDatabaseConnection()
   .then(() => {
