@@ -1,15 +1,15 @@
 version: "3"
 
 services:
-  api:
-    container_name: rokket-api
+  backend:
+    container_name: api_rokket-api
     build: .
     restart: always
     ports:
-      - "80:8080"
+      - "8080:8080"
 
   mongo:
-    container_name: rokket-db
+    container_name: api_rokket-db
     image: mongo
     expose:
       - "27017"

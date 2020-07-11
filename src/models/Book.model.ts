@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-interface IBook extends mongoose.Document {
+interface Book extends mongoose.Document {
   title: string;
   state: string;
   author: string;
@@ -18,6 +18,6 @@ const BookSchema = new mongoose.Schema({
   author: String,
 });
 
-const Book = mongoose.model<IBook>("books", BookSchema);
+const Book = mongoose.model<Book>("books", BookSchema);
 
 export default Book;
